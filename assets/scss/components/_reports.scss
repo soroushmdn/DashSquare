@@ -1,0 +1,28 @@
+.reports {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.report {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.report details > summary {
+  cursor: pointer;
+}
+
+.report__description {
+  color: var(--text-color-light);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@ BREAK POINTS @@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media (max-width: 374px) {
+  .reports {
+    gap: 0.9rem;
+  }
+}

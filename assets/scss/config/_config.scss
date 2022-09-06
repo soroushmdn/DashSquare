@@ -1,0 +1,234 @@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@   FONTS   @@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@font-face {
+  font-family: '400';
+  src: url(../fonts/Heebo-Regular.ttf);
+}
+
+@font-face {
+  font-family: '500';
+  src: url(../fonts/Heebo-Medium.ttf);
+}
+
+@font-face {
+  font-family: '700';
+  src: url(../fonts/Heebo-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'logo';
+  src: url(../fonts/AlfaSlabOne-Regular.ttf);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@   VARIABLES   @@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+:root {
+  --normal-font-size: 0.9rem;
+
+  --first-color: hsl(245, 82%, 70%);
+  --bg-color: hsl(245, 82%, 95%);
+  --container-color: hsl(245, 82%, 97%);
+  --box-shadow-color: hsl(245, 82%, 85%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+
+  --border-radius: 0.7rem;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@  CHANGE THEME   @@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.dark-theme {
+  --bg-color: hsl(245, 82%, 20%);
+  --container-color: hsl(245, 82%, 15%);
+  --box-shadow-color: hsl(245, 82%, 23%);
+  --title-color: hsl(0, 0%, 90%);
+  --text-color: hsl(0, 0%, 60%);
+}
+
+.dark-theme .ri-moon-line {
+  display: none;
+}
+
+.dark-theme .ri-sun-line {
+  display: flex;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@     BASE     @@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  appearance: none;
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+input::placeholder {
+  font-family: '400';
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+}
+
+body {
+  padding: 5rem 1.5rem 1rem calc(58px + 1.5rem);
+  background: var(--bg-color);
+  transition: 0.5s;
+  // min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: '700';
+  color: var(--title-color);
+}
+
+a {
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@    REUSABLE CLASSES    @@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.pb {
+  padding-bottom: 2rem;
+}
+
+.mb {
+  margin-bottom: 2rem;
+}
+
+.success {
+  color: hsl(86, 100%, 45%);
+}
+
+.danger {
+  color: hsl(7, 100%, 50%);
+}
+
+.spot-primary {
+  background: hsl(256, 100%, 65%);
+}
+
+.spot-success {
+  background: hsl(86, 100%, 45%);
+}
+
+.spot-danger {
+  background: hsl(7, 100%, 50%);
+}
+
+.bg-primary {
+  background: hsl(256, 100%, 90%);
+  color: hsl(256, 100%, 65%);
+}
+
+.bg-danger {
+  background: hsl(7, 100%, 85%);
+  color: hsl(7, 100%, 50%);
+}
+
+.bg-success {
+  background: hsl(86, 100%, 80%);
+  color: hsl(86, 100%, 45%);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@  SCROLL BAR  @@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+::-webkit-scrollbar {
+  background: hsl(245, 20%, 90%);
+  width: 10px;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(245, 20%, 70%);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(245, 20%, 60%);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.main__container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+.footer__copy {
+  margin-top: 2rem;
+  font-size: 0.65rem;
+  text-align: center;
+
+  a {
+    color: var(--first-color);
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+
+  display: grid;
+  place-items: center;
+  background: hsla(245, 82%, 80%, 0.3);
+  backdrop-filter: blur(30px);
+}
+
+.preloader img {
+  width: 200px;
+  margin: 4rem 0 0 58px;
+}
+
+@media (max-width: 574px) {
+  .preloader img {
+    width: 150px;
+    margin: 4rem 0 0 0;
+  }
+}

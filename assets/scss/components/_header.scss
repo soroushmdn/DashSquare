@@ -1,0 +1,206 @@
+.menu__btn,
+.ri-sun-line {
+  display: none;
+}
+
+.header,
+.header__search,
+.header__search-form,
+.header__btns,
+.profile,
+.profile__link,
+.theme__btn {
+  display: flex;
+  align-items: center;
+}
+
+.header,
+.header__search {
+  background: var(--container-color);
+  border-bottom: 1px solid var(--bg-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  justify-content: space-between;
+  height: 4rem;
+  padding: 0 1.5rem 0 calc(58px + 1.5rem);
+}
+
+.header button {
+  font-size: 1.2rem;
+}
+
+.header__logo,
+.nav__logo {
+  font-family: 'logo';
+  color: var(--first-color);
+  font-size: 1.2rem;
+}
+
+.header__btns {
+  gap: 0.8rem;
+}
+
+.header__btns button:not(.menu__btn) {
+  display: flex;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@   PROFILE    @@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.profile {
+  position: relative;
+  gap: 0.5rem;
+}
+
+.profile img {
+  border-radius: 50%;
+  border: 2px solid var(--first-color);
+}
+
+.profile__menu {
+  background: var(--container-color);
+  box-shadow: 0 0 10px 0 var(--box-shadow-color);
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  padding: 1.5rem 3rem 1.5rem 1.5rem;
+  display: grid;
+  gap: 0.8rem;
+  border-radius: var(--border-radius);
+  clip-path: circle(0.3% at 100% 0);
+}
+
+.profile__link {
+  gap: 0.5rem;
+}
+
+.profile__link i {
+  font-size: 1.1rem;
+}
+
+.profile__menu li:last-child {
+  margin-top: 1.5rem;
+}
+
+.profile__menu,
+.profile button {
+  transition: 0.5s;
+}
+
+// ---------- JS CLASSES ----------
+.show-profile-menu {
+  clip-path: circle(70.7% at 50% 50%);
+}
+
+.change-direction-profile-btn {
+  transform: rotate(180deg);
+}
+
+.header-box-shadow {
+  box-shadow: 0 1px 5px 0 var(--box-shadow-color);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@  HEADER__SEARCH    @@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.header__search {
+  top: -5rem;
+  transition: 0.5s;
+}
+
+.header__search button {
+  display: flex;
+}
+
+.header__search-form {
+  background: var(--bg-color);
+  width: 50%;
+  padding: 0.5rem 0.8rem;
+  border-radius: var(--border-radius);
+}
+
+.header__search-form input {
+  width: 100%;
+  background: transparent;
+  padding-right: 0.5rem;
+}
+
+.header__search-form input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  background: url('../img/search-cancel-button.png');
+  height: 18px;
+  width: 18px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.header__search-form input[type='search']:focus::-webkit-search-cancel-button {
+  opacity: 1;
+}
+
+// ---------- HOVER ----------
+.header button,
+.profile__link {
+  transition: 0.3s;
+}
+
+.header button:hover,
+.profile__link:hover {
+  color: var(--first-color);
+}
+
+// ---------- JS CLASSES ----------
+.show-header-search {
+  top: 0;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@ BREAK POINTS @@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media (max-width: 1024px) {
+  .menu__btn {
+    display: flex;
+  }
+
+  .header,
+  .header__search {
+    padding-left: 1.5rem;
+  }
+
+  .header__search .header__logo {
+    display: none;
+  }
+
+  .header__search-form {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .header,
+  .header__search {
+    padding: 0 1rem;
+  }
+
+  .header__logo,
+  .nav__logo {
+    font-size: 0.8rem;
+  }
+
+  .header button {
+    font-size: 1rem;
+  }
+
+  .header__btns {
+    gap: 0.5rem;
+  }
+
+  .header__search-form {
+    width: 90%;
+    margin: initial;
+  }
+}

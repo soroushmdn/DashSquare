@@ -1,0 +1,72 @@
+.payment,
+.payment__badges,
+.payment__badge {
+  display: flex;
+}
+
+.payment {
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.payment__badges {
+  flex-wrap: wrap;
+  gap: 0.7rem;
+
+  button i {
+    font-size: 1rem;
+  }
+}
+
+.payment__badge {
+  background: var(--container-color);
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 3px 5px 0 var(--box-shadow-color);
+}
+
+.payment__spot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: wink 2s infinite linear;
+}
+
+@keyframes wink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.payment__name {
+  margin-right: 1rem;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@ BREAK POINTS @@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media (max-width: 575px) {
+  .payment {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .payment__badges {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 374px) {
+  .payment__badge {
+    gap: 0.5rem;
+    padding: 0.3rem 0.7rem;
+  }
+}

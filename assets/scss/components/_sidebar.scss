@@ -1,0 +1,179 @@
+.nav,
+.nav__list,
+.nav__item-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  background: var(--container-color);
+  border-right: 1px solid var(--bg-color);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 100;
+
+  gap: 3rem;
+  padding: 1.2rem 0;
+  width: 58px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+nav::-webkit-scrollbar {
+  background: hsl(245, 20%, 90%);
+  width: 3px;
+}
+nav::-webkit-scrollbar-thumb {
+  background: hsl(245, 20%, 70%);
+  width: 3px;
+}
+
+.nav__close {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.nav__logo span {
+  opacity: 0;
+}
+
+.nav__list {
+  gap: 1rem;
+}
+
+.nav__item {
+  max-height: 34px;
+  overflow: hidden;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 10px;
+
+  position: relative;
+  padding: 0 1rem;
+}
+
+.nav__link-icon {
+  font-size: 1.5rem;
+}
+
+.nav__link-name {
+  opacity: 0;
+}
+
+.nav__link-btn {
+  margin-left: auto;
+}
+
+.nav__item-menu {
+  background: var(--bg-color);
+  padding: 1rem 3rem 1rem 2rem;
+  margin: 0 1rem;
+  gap: 0.5rem;
+  border-radius: var(--border-radius);
+}
+
+.nav__item span,
+.nav__item-menu a {
+  white-space: nowrap;
+}
+
+// ---------- HOVER ----------
+.nav,
+.nav__logo span,
+.nav__item,
+.nav__link i,
+.nav__link span,
+.nav__item-menu,
+.nav__item-menu a {
+  transition: 0.4s;
+}
+
+.nav:hover {
+  width: 250px;
+  box-shadow: 1px 0 5px 0 var(--box-shadow-color);
+}
+
+.nav:hover .nav__link-name,
+.nav:hover .nav__logo span {
+  opacity: 1;
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+}
+
+.nav__item:hover {
+  max-height: 200px;
+}
+
+.nav__item:hover .nav__link-btn {
+  transform: rotate(180deg);
+  color: var(--first-color);
+}
+
+// ---------- ACTIVE CLASS ----------
+.nav-link-active {
+  color: var(--first-color);
+}
+
+.nav-link-active::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--first-color);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@ BREAK POINTS @@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media (max-width: 1024px) {
+  .nav__close {
+    display: flex;
+  }
+
+  .nav {
+    left: -100%;
+    width: 250px;
+  }
+
+  .nav__link-name,
+  .nav__logo span {
+    opacity: 1;
+  }
+
+  // ---------- JS CLASSES ----------
+  .show-sidebar {
+    left: 0;
+    box-shadow: 1px 0 5px 0 var(--box-shadow-color);
+  }
+}
+
+@media (max-width: 575px) {
+  .nav {
+    width: 200px;
+  }
+
+  .nav:hover {
+    width: 200px;
+  }
+}

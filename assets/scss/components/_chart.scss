@@ -1,0 +1,21 @@
+.chart {
+  background: var(--container-color);
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  padding: 1.3rem;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@ BREAK POINTS @@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media (max-width: 575px) {
+  .chart {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 374px) {
+  .chart {
+    padding: 0.5rem;
+  }
+}

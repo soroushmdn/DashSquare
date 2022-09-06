@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@    FAIVCON    @@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo.png"
+      type="image/x-icon"
+    />
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@ remixicon.com @@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <link rel="stylesheet" href="./assets/css/remixicon.css" />
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@   CSS   @@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <title>DashSquare</title>
+  </head>
+  <body>
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@     PRELOADER      @@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <div class="preloader" id="preloader">
+      <img src="./assets/img/preloader.gif" alt="preloader" />
+    </div>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@       HEADER       @@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <header class="header" id="header">
+      <a href="#" class="header__logo">DashSquare</a>
+
+      <div class="header__btns">
+        <button class="search__btn" id="search-btn">
+          <i class="ri-search-line"></i>
+        </button>
+
+        <button class="theme__btn" id="theme-btn">
+          <i class="ri-sun-line"></i>
+          <i class="ri-moon-line"></i>
+        </button>
+
+        <!-- HEADER PROFILE -->
+        <div class="profile">
+          <img src="./assets/img/profile.jpg" alt="" />
+          <span>John Doe</span>
+          <button class="profile__btn" id="profile-btn">
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
+
+          <ul class="profile__menu" id="profile-menu">
+            <li>
+              <a href="#" class="profile__link"
+                ><i class="ri-user-line"></i> My Profile</a
+              >
+            </li>
+            <li>
+              <a href="#" class="profile__link"
+                ><i class="ri-chat-4-line"></i> Messages</a
+              >
+            </li>
+            <li>
+              <a href="#" class="profile__link"
+                ><i class="ri-notification-3-line"></i> Notification</a
+              >
+            </li>
+            <li>
+              <a href="#" class="profile__link"
+                ><i class="ri-settings-4-line"></i> Settings</a
+              >
+            </li>
+            <li>
+              <a href="#" class="profile__link"
+                ><i class="ri-logout-box-line"></i> Log out</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <button class="menu__btn" id="menu-btn">
+          <i class="ri-menu-line menu__btn"></i>
+        </button>
+      </div>
+
+      <!-- HEADER SEARCH -->
+      <div class="header__search" id="header-search">
+        <a href="#" class="header__logo">DashSquare</a>
+
+        <form action="" class="header__search-form">
+          <input placeholder="Search" type="search" name="" id="" />
+          <button type="submit">
+            <i class="ri-search-line"></i>
+          </button>
+        </form>
+
+        <button class="search__close" id="search-close">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@        SIDE BAR       @@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <nav class="nav" id="nav">
+      <button class="nav__close" id="nav-close">
+        <i class="ri-close-line"></i>
+      </button>
+
+      <a href="#" class="nav__logo">
+        <img src="./assets/img/logo.png" alt="" /><span>DashSquare</span>
+      </a>
+
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#" class="nav__link nav-link-active"
+            ><i class="ri-dashboard-line nav__link-icon"></i>
+            <span class="nav__link-name">Dashboard</span>
+          </a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#" class="nav__link"
+            ><i class="ri-exchange-dollar-line nav__link-icon"></i>
+            <span class="nav__link-name">Excahnge</span>
+            <i class="ri-arrow-drop-down-line nav__link-btn"></i>
+          </a>
+
+          <ul class="nav__item-menu">
+            <li><a href="#">Exchange cny</a></li>
+            <li><a href="#">Exchange funds</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item">
+          <a href="#" class="nav__link"
+            ><i class="ri-wallet-3-line nav__link-icon"></i>
+            <span class="nav__link-name">Wallet</span>
+          </a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#" class="nav__link"
+            ><i class="ri-exchange-funds-line nav__link-icon"></i>
+            <span class="nav__link-name">Transactions</span>
+            <i class="ri-arrow-drop-down-line nav__link-btn"></i>
+          </a>
+
+          <ul class="nav__item-menu">
+            <li><a href="#">Dollar</a></li>
+            <li><a href="#">Euro</a></li>
+            <li><a href="#">Pound</a></li>
+            <li><a href="#">Bitcoin</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item">
+          <a href="#" class="nav__link"
+            ><i class="ri-line-chart-line nav__link-icon"></i>
+            <span class="nav__link-name">Analytics</span>
+            <i class="ri-arrow-drop-down-line nav__link-btn"></i>
+          </a>
+
+          <ul class="nav__item-menu">
+            <li><a href="#">Pie chart</a></li>
+            <li><a href="#">Bubble chart</a></li>
+            <li><a href="#">Donut chart</a></li>
+            <li><a href="#">Line chart</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item">
+          <a href="#" class="nav__link"
+            ><i class="ri-coins-line nav__link-icon"></i>
+            <span class="nav__link-name">Deposit</span>
+          </a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#" class="nav__link"
+            ><i class="ri-swap-box-line nav__link-icon"></i>
+            <span class="nav__link-name">Trading</span>
+          </a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#" class="nav__link"
+            ><i class="ri-question-line nav__link-icon"></i>
+            <span class="nav__link-name">Help Center</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@          MAIN         @@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <main>
+      <div class="main__container">
+        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+        <!-- @@@@@@@@@     MIDDLE SECTION    @@@@@@@@@ -->
+        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+        <section class="middle">
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+          <!-- @@@@@@@@@         CASH         @@@@@@@@@@ -->
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+          <div class="cash pb">
+            <div class="cash__header">
+              <h2 class="cash__title">Overview</h2>
+              <input type="date" name="" id="" />
+            </div>
+
+            <div class="cash__cards">
+              <div class="cash__card">
+                <div class="cash__card-top">
+                  <img src="./assets/img/bitcoin.png" alt="" />
+                  <img src="./assets/img/visa.png" alt="" />
+                </div>
+
+                <div class="cash__card-middle">
+                  <h2>$995.869</h2>
+                  <img src="./assets/img/chip.png" alt="" />
+                </div>
+
+                <div class="cash__card-bottom">
+                  <div class="cash__card-holder">
+                    <small>Card Holder</small>
+                    <h4>JOHN DOE</h4>
+                  </div>
+
+                  <div class="cash__card-bottom-right">
+                    <div class="cash__card-expiry">
+                      <small>Expiry</small>
+                      <h4>05/25</h4>
+                    </div>
+
+                    <div class="cash__card-cvv">
+                      <small>CVV</small>
+                      <h4>568</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cash__card">
+                <div class="cash__card-top">
+                  <img src="./assets/img/ethereum.png" alt="" />
+                  <img src="./assets/img/masterCard.png" alt="" />
+                </div>
+
+                <div class="cash__card-middle">
+                  <h2>$562.369</h2>
+                  <img src="./assets/img/chip.png" alt="" />
+                </div>
+
+                <div class="cash__card-bottom">
+                  <div class="cash__card-holder">
+                    <small>Card Holder</small>
+                    <h4>JOHN DOE</h4>
+                  </div>
+
+                  <div class="cash__card-bottom-right">
+                    <div class="cash__card-expiry">
+                      <small>Expiry</small>
+                      <h4>03/23</h4>
+                    </div>
+
+                    <div class="cash__card-cvv">
+                      <small>CVV</small>
+                      <h4>896</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cash__card">
+                <div class="cash__card-top">
+                  <img src="./assets/img/tether.png" alt="" />
+                  <img src="./assets/img/paypal.png" alt="" />
+                </div>
+
+                <div class="cash__card-middle">
+                  <h2>$326.159</h2>
+                  <img src="./assets/img/chip.png" alt="" />
+                </div>
+
+                <div class="cash__card-bottom">
+                  <div class="cash__card-holder">
+                    <small>Card Holder</small>
+                    <h4>JOHN DOE</h4>
+                  </div>
+
+                  <div class="cash__card-bottom-right">
+                    <div class="cash__card-expiry">
+                      <small>Expiry</small>
+                      <h4>07/05</h4>
+                    </div>
+
+                    <div class="cash__card-cvv">
+                      <small>CVV</small>
+                      <h4>763</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+          <!-- @@@@@@@@@         TOTAL         @@@@@@@@@ -->
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+          <div class="total pb">
+            <div class="total__box">
+              <i class="ri-funds-fill success"></i>
+
+              <div class="total__middle">
+                <div class="total__detail">
+                  <h3>Total Income</h3>
+                  <h2>$20,899</h2>
+                </div>
+
+                <div class="total__progress">
+                  <svg>
+                    <circle cx="50" cy="50" r="40"></circle>
+                  </svg>
+
+                  <p class="total__precentage">81%</p>
+                </div>
+              </div>
+
+              <small class="total__time">Last 24 Hours </small>
+            </div>
+
+            <div class="total__box">
+              <i class="ri-creative-commons-nc-fill danger"></i>
+
+              <div class="total__middle">
+                <div class="total__detail">
+                  <h3>Total Expenses</h3>
+                  <h2>$25,283</h2>
+                </div>
+
+                <div class="total__progress">
+                  <svg>
+                    <circle cx="50" cy="50" r="40"></circle>
+                  </svg>
+
+                  <p class="total__precentage">43%</p>
+                </div>
+              </div>
+
+              <small class="total__time"> Last 24 Hours </small>
+            </div>
+          </div>
+
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+          <!-- @@@@@@@@@         REPORT        @@@@@@@@@ -->
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+          <div class="reports pb">
+            <div class="report">
+              <h3 class="report__title">Income</h3>
+
+              <details>
+                <summary>Details</summary>
+                <h2>$19,688</h2>
+                <small class="success">+2.2%</small>
+              </details>
+
+              <small class="report__description"
+                >Compared to $3,590 last month</small
+              >
+            </div>
+
+            <div class="report">
+              <h3 class="report__title">Expenses</h3>
+
+              <details>
+                <summary>Details</summary>
+                <h2>$19,688</h2>
+                <small class="danger">+15.5%</small>
+              </details>
+
+              <small class="report__description"
+                >Compared to $25,00 last month</small
+              >
+            </div>
+
+            <div class="report">
+              <h3 class="report__title">Cashback</h3>
+
+              <details>
+                <summary>Details</summary>
+                <h2>$8,005</h2>
+                <small class="success">+8.2%</small>
+              </details>
+
+              <small class="report__description"
+                >Compared to $5,550 last month</small
+              >
+            </div>
+
+            <div class="report">
+              <h3 class="report__title">Hatch</h3>
+
+              <details>
+                <summary>Details</summary>
+                <h2>$65,850</h2>
+                <small class="danger">-20.2%</small>
+              </details>
+
+              <small class="report__description"
+                >Compared to $3,590 last month</small
+              >
+            </div>
+          </div>
+
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+          <!-- @@@@@@@@@        PAYMENT        @@@@@@@@@ -->
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+          <div class="payment pb">
+            <h3 class="payment__title">Fast Payment</h3>
+
+            <div class="payment__badges">
+              <button class="payment__badge">
+                <i class="ri-add-line"></i>
+              </button>
+
+              <div class="payment__badge">
+                <div class="payment__spot spot-primary"></div>
+                <span class="payment__name">Training</span>
+                <h3 class="payment__amount">$50</h3>
+              </div>
+
+              <div class="payment__badge">
+                <div class="payment__spot spot-success"></div>
+                <span class="payment__name">Internet</span>
+                <h3 class="payment__amount">$40</h3>
+              </div>
+
+              <div class="payment__badge">
+                <div class="payment__spot spot-danger"></div>
+                <span class="payment__name">Gas</span>
+                <h3 class="payment__amount">$150</h3>
+              </div>
+
+              <div class="payment__badge">
+                <div class="payment__spot spot-danger"></div>
+                <span class="payment__name">Movies</span>
+                <h3 class="payment__amount">$95</h3>
+              </div>
+
+              <div class="payment__badge">
+                <div class="payment__spot spot-primary"></div>
+                <span class="payment__name">Education</span>
+                <h3 class="payment__amount">$120</h3>
+              </div>
+
+              <div class="payment__badge">
+                <div class="payment__spot spot-success"></div>
+                <span class="payment__name">Electricity</span>
+                <h3 class="payment__amount">$60</h3>
+              </div>
+
+              <div class="payment__badge">
+                <div class="payment__spot spot-danger"></div>
+                <span class="payment__name">Food</span>
+                <h3 class="payment__amount">$359</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+          <!-- @@@@@@@@@         CHART         @@@@@@@@@ -->
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+          <canvas class="chart" id="chart"></canvas>
+        </section>
+
+        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+        <!-- @@@@@@@@@     ASIDE SECTION     @@@@@@@@@ -->
+        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+        <section class="aside">
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+          <!-- @@@@@@@@@      INVESTMENT       @@@@@@@@@ -->
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+          <div class="investment mb">
+            <header class="investment__header">
+              <h2>Investments</h2>
+              <a href="#">More<i class="ri-arrow-right-s-line"></i></a>
+            </header>
+
+            <div class="investment__row">
+              <img src="./assets/img/investment1.png" alt="" />
+
+              <h4>Hp</h4>
+
+              <div class="investment__date-time">
+                <p>4Nov,2022</p>
+                <small> 9:00pm</small>
+              </div>
+
+              <div class="investment__bond">
+                <p>1560</p>
+                <small>Bonds</small>
+              </div>
+
+              <div class="investment__amount">
+                <h4>$18,052</h4>
+                <small class="success">+4.26%</small>
+              </div>
+            </div>
+
+            <div class="investment__row">
+              <img src="./assets/img/investment2.png" alt="" />
+
+              <h4>Netflix</h4>
+
+              <div class="investment__date-time">
+                <p>5Jun,2022</p>
+                <small> 2:00pm</small>
+              </div>
+
+              <div class="investment__bond">
+                <p>1230</p>
+                <small>Bonds</small>
+              </div>
+
+              <div class="investment__amount">
+                <h4>$20,055</h4>
+                <small class="danger">-5.25%</small>
+              </div>
+            </div>
+
+            <div class="investment__row">
+              <img src="./assets/img/investment3.png" alt="" />
+
+              <h4>Tictoc</h4>
+
+              <div class="investment__date-time">
+                <p>8Oct,2022</p>
+                <small> 3:00pm</small>
+              </div>
+
+              <div class="investment__bond">
+                <p>1320</p>
+                <small>Bonds</small>
+              </div>
+
+              <div class="investment__amount">
+                <h4>$15,689</h4>
+                <small class="success">+2.38%</small>
+              </div>
+            </div>
+
+            <div class="investment__row">
+              <img src="./assets/img/investment4.png" alt="" />
+
+              <h4>Pepsi</h4>
+
+              <div class="investment__date-time">
+                <p>10Jan,2022</p>
+                <small> 9:00pm</small>
+              </div>
+
+              <div class="investment__bond">
+                <p>1570</p>
+                <small>Bonds</small>
+              </div>
+
+              <div class="investment__amount">
+                <h4>$6,052</h4>
+                <small class="danger">-5.25%</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+          <!-- @@@@@@@@@      TRANSACTION      @@@@@@@@@ -->
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+          <div class="transaction mb">
+            <header class="transaction__header">
+              <h2>Recent Transactions</h2>
+              <a href="#">More<i class="ri-arrow-right-s-line"></i></a>
+            </header>
+
+            <div class="transaction__row">
+              <div class="transaction__title">
+                <i class="ri-headphone-fill bg-primary"></i>
+                <div>
+                  <h4>Music</h4>
+                  <small>20.10.2022</small>
+                </div>
+              </div>
+
+              <div class="transaction__card">
+                <i class="ri-paypal-fill"></i>
+                <div>
+                  <h5>*200</h5>
+                  <small>Credit Card</small>
+                </div>
+              </div>
+
+              <h4 class="transaction__amount">-$25</h4>
+            </div>
+
+            <div class="transaction__row">
+              <div class="transaction__title">
+                <i class="ri-restaurant-fill bg-success"></i>
+                <div>
+                  <h4>Restaurant</h4>
+                  <small>10.10.2022</small>
+                </div>
+              </div>
+
+              <div class="transaction__card">
+                <i class="ri-visa-line"></i>
+                <div>
+                  <h5>*109</h5>
+                  <small>Credit Card</small>
+                </div>
+              </div>
+
+              <h4 class="transaction__amount">-$20</h4>
+            </div>
+
+            <div class="transaction__row">
+              <div class="transaction__title">
+                <i class="ri-shopping-bag-fill bg-danger"></i>
+                <div>
+                  <h4>Shopping</h4>
+                  <small>12.10.2022</small>
+                </div>
+              </div>
+
+              <div class="transaction__card">
+                <i class="ri-mastercard-fill"></i>
+                <div>
+                  <h5>*400</h5>
+                  <small>Credit Card</small>
+                </div>
+              </div>
+
+              <h4 class="transaction__amount">-$505</h4>
+            </div>
+
+            <div class="transaction__row">
+              <div class="transaction__title">
+                <i class="ri-gamepad-fill bg-primary"></i>
+                <div>
+                  <h4>Games</h4>
+                  <small>28.10.2022</small>
+                </div>
+              </div>
+
+              <div class="transaction__card">
+                <i class="ri-visa-line"></i>
+                <div>
+                  <h5>*320</h5>
+                  <small>Credit Card</small>
+                </div>
+              </div>
+
+              <h4 class="transaction__amount">-$95</h4>
+            </div>
+
+            <div class="transaction__row">
+              <div class="transaction__title">
+                <i class="ri-first-aid-kit-fill bg-success"></i>
+                <div>
+                  <h4>Pharmecy</h4>
+                  <small>05.10.2022</small>
+                </div>
+              </div>
+
+              <div class="transaction__card">
+                <i class="ri-paypal-fill"></i>
+                <div>
+                  <h5>*110</h5>
+                  <small>Credit Card</small>
+                </div>
+              </div>
+
+              <h4 class="transaction__amount">-$35</h4>
+            </div>
+          </div>
+
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+          <!-- @@@@@@@@@        REQUEST        @@@@@@@@@ -->
+          <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+          <div class="request">
+            <h2>Recent Requests</h2>
+            <div class="request__container">
+              <div class="request__data">
+                <img src="./assets/img/request1.jpg" alt="" />
+
+                <div>
+                  <p class="request__message">
+                    <span>Mike Hamilton</span> accepted your cooperation
+                    request.
+                  </p>
+
+                  <small class="request__time">5 minutes ago</small>
+                </div>
+              </div>
+
+              <div class="request__data">
+                <img src="./assets/img/request2.jpg" alt="" />
+
+                <div>
+                  <p class="request__message">
+                    <span>Lisa Leclerc</span> rejected your cooperation request.
+                  </p>
+                  <small class="request__time">10 minutes ago</small>
+                </div>
+              </div>
+
+              <div class="request__data">
+                <img src="./assets/img/request3.jpg" alt="" />
+
+                <div>
+                  <p class="request__message">
+                    <span>Jack Russel</span> not seen your cooperation request.
+                  </p>
+                  <small class="request__time">5 minutes ago</small>
+                </div>
+              </div>
+
+              <div class="request__data">
+                <img src="./assets/img/request4.jpg" alt="" />
+
+                <div>
+                  <p class="request__message">
+                    <span>Steve Mock</span> accepted your cooperation request.
+                  </p>
+                  <small class="request__time">20 minutes ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@      FOOTER COPY      @@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <p class="footer__copy">
+      &copy; 2022 coded & design by
+      <a href="https://github.com/soroushmdn" target="_blank"
+        >Soroush Karimi.</a
+      >
+    </p>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@   chartjs.org   @@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+    <script src="./assets/js/chart.min.js"></script>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@   MAIN JS   @@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+.total {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.total__box {
+  background: var(--container-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 3px 10px 0 var(--box-shadow-color);
+  padding: 1.2rem;
+}
+
+.total__box i {
+  font-size: 2.5rem;
+}
+
+.total__middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total__detail h2 {
+  font-size: 1.7rem;
+}
+
+.total__progress {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.total__progress svg {
+  width: 100px;
+  height: 100px;
+}
+
+.total__progress svg circle {
+  fill: none;
+  stroke: var(--first-color);
+  stroke-width: 10;
+  stroke-linecap: round;
+  // transform: translate();
+}
+
+.total__box:nth-child(1) circle {
+  stroke-dasharray: 200;
+  // stroke-dashoffset: ;
+}
+
+.total__box:nth-child(2) circle {
+  stroke-dasharray: 150;
+  // stroke-dashoffset: ;
+}
+
+.total__precentage {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  inset: 0;
+  margin: auto;
+  font-size: 1rem;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@ BREAK POINTS @@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media (max-width: 575px) {
+  .total {
+    grid-template-columns: 1fr;
+  }
+}

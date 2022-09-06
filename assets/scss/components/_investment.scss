@@ -1,0 +1,66 @@
+.investment {
+  background: var(--container-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 3px 10px 0 var(--box-shadow-color);
+}
+
+.investment__header,
+.investment__header a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.investment__header {
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.investment__header a i {
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.investment__row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  transition: 0.3s;
+}
+
+.investment__row:not(:last-child) {
+  border-bottom: 1px solid var(--bg-color);
+}
+
+.investment__row img {
+  width: 35px;
+  height: 35px;
+}
+
+.investment__amount {
+  justify-self: end;
+}
+
+// ---------- HOVER ----------
+.investment__row:hover {
+  background: var(--bg-color);
+  cursor: pointer;
+}
+
+.investment__header a:hover i {
+  transform: translateX(5px);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@ BREAK POINTS @@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media (max-width: 374px) {
+  .investment__header {
+    padding: 1rem 1rem 0.5rem;
+  }
+
+  .investment__row {
+    padding: 1rem;
+  }
+}

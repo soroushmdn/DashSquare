@@ -1,0 +1,35 @@
+.request__container {
+  margin-top: 1rem;
+  background: var(--container-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 3px 10px 0 var(--box-shadow-color);
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.request__data {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.request__data img {
+  border-radius: 50%;
+  border: 1px solid var(--first-color);
+  width: 45px;
+}
+
+.request__message span {
+  font-weight: bold;
+  color: var(--title-color);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@ BREAK POINTS @@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media (max-width: 374px) {
+  .request__container {
+    padding: 1.5rem 1rem;
+  }
+}

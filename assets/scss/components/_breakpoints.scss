@@ -1,0 +1,36 @@
+@media (max-width: 1399px) {
+  .main__container {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --normal-font-size: 0.8rem;
+  }
+
+  body {
+    padding-left: 1.5rem;
+  }
+
+  .main__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575px) {
+  :root {
+    --normal-font-size: 0.7rem;
+  }
+
+  body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 374px) {
+  :root {
+    --normal-font-size: 0.65rem;
+  }
+}
