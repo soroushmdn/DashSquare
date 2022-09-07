@@ -1,5 +1,5 @@
 @media (max-width: 1399px) {
-  .main__container {
+  main {
     grid-template-columns: 1.5fr 1fr;
   }
 }
@@ -13,7 +13,7 @@
     padding-left: 1.5rem;
   }
 
-  .main__container {
+  main {
     grid-template-columns: 1fr;
   }
 }
