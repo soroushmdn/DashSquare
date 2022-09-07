@@ -45,7 +45,7 @@
   --container-color: hsl(245, 82%, 15%);
   --box-shadow-color: hsl(245, 82%, 23%);
   --title-color: hsl(0, 0%, 90%);
-  --text-color: hsl(0, 0%, 60%);
+  --text-color: hsl(0, 0%, 70%);
 }
 
 .dark-theme .ri-moon-line {
@@ -85,7 +85,12 @@ body {
   padding: 5rem 1.5rem 1rem calc(58px + 1.5rem);
   background: var(--bg-color);
   transition: 0.5s;
-  // min-height: 100vh;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
 }
 
 h1,
@@ -163,6 +168,36 @@ button {
 }
 
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@    PRELOADER    @@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background: hsla(245, 82%, 80%, 0.2);
+  backdrop-filter: blur(20px);
+}
+
+.preloader img {
+  width: 200px;
+  margin: 4rem 0 0 58px;
+}
+
+@media (max-width: 574px) {
+  .preloader img {
+    width: 150px;
+    margin: 4rem 0 0 0;
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@@@@@@@@@  SCROLL BAR  @@@@@@@@@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ::-webkit-scrollbar {
@@ -180,19 +215,9 @@ button {
   background: hsl(245, 20%, 60%);
 }
 
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-.main__container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1.5rem;
-}
-
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@   FOOTER COPY    @@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 .footer__copy {
   margin-top: 2rem;
   font-size: 0.65rem;
@@ -200,35 +225,5 @@ button {
 
   a {
     color: var(--first-color);
-  }
-}
-
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-.preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 98;
-
-  display: grid;
-  place-items: center;
-  background: hsla(245, 82%, 80%, 0.3);
-  backdrop-filter: blur(30px);
-}
-
-.preloader img {
-  width: 200px;
-  margin: 4rem 0 0 58px;
-}
-
-@media (max-width: 574px) {
-  .preloader img {
-    width: 150px;
-    margin: 4rem 0 0 0;
   }
 }
