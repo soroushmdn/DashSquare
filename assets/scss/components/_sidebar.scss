@@ -107,7 +107,7 @@ nav::-webkit-scrollbar-thumb {
 
 .nav:hover {
   width: 250px;
-  box-shadow: 1px 0 5px 0 var(--box-shadow-color);
+  box-shadow: 0 0 3px 0 var(--box-shadow-color);
 }
 
 .nav:hover .nav__link-name,
@@ -164,7 +164,7 @@ nav::-webkit-scrollbar-thumb {
   // ---------- JS CLASSES ----------
   .show-sidebar {
     left: 0;
-    box-shadow: 1px 0 5px 0 var(--box-shadow-color);
+    box-shadow: 0 0 3px 0 var(--box-shadow-color);
   }
 }
 
