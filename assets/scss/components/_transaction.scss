@@ -1,6 +1,6 @@
 .transaction {
-  border: 1px solid var(--container-color);
   border-radius: var(--border-radius);
+  box-shadow: 0 3px 5px 0 var(--box-shadow-color);
 }
 
 .transaction__header,
