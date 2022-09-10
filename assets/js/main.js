@@ -166,3 +166,15 @@ new Chart(chart, {
     responsive: true,
   },
 });
+
+//  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//  @@@@@@@@@@@@   Jquery  @@@@@@@@@@@@
+//  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+$(function () {
+  if (!Modernizr.inputtypes['date']) {
+    $('input[type=date]').datepicker({
+      dateFormat: 'mm-dd-yy',
+    });
+  }
+});
