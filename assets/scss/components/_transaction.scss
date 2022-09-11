@@ -49,11 +49,15 @@
 }
 
 .transaction__card i {
-  background: linear-gradient(hsl(245, 82%, 90%), hsl(245, 82%, 75%));
   color: hsl(0, 0%, 98%);
   font-size: 1.5rem;
   padding: 0.6rem 1.2rem;
   border-radius: 0.3rem;
+}
+
+.transaction-cardbg {
+  background: linear-gradient(hsl(245, 82%, 90%), hsl(245, 82%, 75%));
+  // background: linear-gradient(hsl(245, 82%, 30%), hsl(245, 82%, 15%));
 }
 
 .transaction__amount {
