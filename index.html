@@ -215,16 +215,23 @@
         <div class="cash pb">
           <div class="cash__header">
             <h2 class="cash__title">Overview</h2>
-            <input
+            <!-- <input
               type="date"
-              value="2022-01-01"
+              value="01-01-2022"
               min="2022-01-01"
               max="2030-01-01"
+            /> -->
+
+            <input
+              type="date"
+              data-date=""
+              data-date-format="DD MMMM YYYY"
+              value="2022-01-01"
             />
           </div>
 
           <div class="cash__cards">
-            <div class="cash__card">
+            <div class="cash__card cash-cardbg">
               <div class="cash__card-top">
                 <img src="./assets/img/bitcoin.png" alt="" />
                 <img src="./assets/img/visa.png" alt="" />
@@ -255,7 +262,7 @@
               </div>
             </div>
 
-            <div class="cash__card">
+            <div class="cash__card cash-cardbg">
               <div class="cash__card-top">
                 <img src="./assets/img/ethereum.png" alt="" />
                 <img src="./assets/img/masterCard.png" alt="" />
@@ -286,7 +293,7 @@
               </div>
             </div>
 
-            <div class="cash__card">
+            <div class="cash__card cash-cardbg">
               <div class="cash__card-top">
                 <img src="./assets/img/tether.png" alt="" />
                 <img src="./assets/img/paypal.png" alt="" />
@@ -605,7 +612,7 @@
             </div>
 
             <div class="transaction__card">
-              <i class="ri-paypal-fill"></i>
+              <i class="ri-paypal-fill transaction-cardbg"></i>
               <div>
                 <h5>*200</h5>
                 <small>Credit Card</small>
@@ -625,7 +632,7 @@
             </div>
 
             <div class="transaction__card">
-              <i class="ri-visa-line"></i>
+              <i class="ri-visa-line transaction-cardbg"></i>
               <div>
                 <h5>*109</h5>
                 <small>Credit Card</small>
@@ -645,7 +652,7 @@
             </div>
 
             <div class="transaction__card">
-              <i class="ri-mastercard-fill"></i>
+              <i class="ri-mastercard-fill transaction-cardbg"></i>
               <div>
                 <h5>*400</h5>
                 <small>Credit Card</small>
@@ -665,7 +672,7 @@
             </div>
 
             <div class="transaction__card">
-              <i class="ri-visa-line"></i>
+              <i class="ri-visa-line transaction-cardbg"></i>
               <div>
                 <h5>*320</h5>
                 <small>Credit Card</small>
@@ -685,7 +692,7 @@
             </div>
 
             <div class="transaction__card">
-              <i class="ri-paypal-fill"></i>
+              <i class="ri-paypal-fill transaction-cardbg"></i>
               <div>
                 <h5>*110</h5>
                 <small>Credit Card</small>
